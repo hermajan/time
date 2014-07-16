@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Binary clock with parameters.">
+    <!-- Parameter bcd=yes shows digits in BCD code, parameter clock=yes shows decimal digits. -->
+    <title>Binary clock</title>
+    <style>
+        body {
+            background-color: black;
+            color: whitesmoke;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .absoluteCenter {
+            margin: auto;
+            position: absolute;
+            top: 50%; left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+         
+        .circle {
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            float: left;
+        }
+        .line {
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        
+        .dark {
+            background-color: darkred;
+        }
+        .light {
+            background-color: red;
+        }
+        .hidden {
+            background-color: transparent;
+            color: transparent;
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        .clock {
+            font-size: 50px;
+        }
+    </style>
+  </head>
+  <body class="absoluteCenter">
+      <div class="line">
+          <div class="circle hidden" id="dot00"></div><div class="circle dark" id="dot01"></div>
+          <div class="circle hidden" id="dot02"></div><div class="circle dark" id="dot03"></div>
+          <div class="circle hidden" id="dot04"></div><div class="circle dark" id="dot05"></div>
+      </div><br/>
+      <div class="line">
+        <div class="circle hidden" id="dot10"></div><div class="circle dark" id="dot11"></div>
+        <div class="circle dark" id="dot12"></div><div class="circle dark" id="dot13"></div>
+        <div class="circle dark" id="dot14"></div><div class="circle dark" id="dot15"></div>
+      </div><br/>
+      <div class="line">
+        <div class="circle dark" id="dot20"></div><div class="circle dark" id="dot21"></div>
+        <div class="circle dark" id="dot22"></div><div class="circle dark" id="dot23"></div>
+        <div class="circle dark" id="dot24"></div><div class="circle dark" id="dot25"></div>
+      </div><br/>
+      <div class="line">
+          <div class="circle dark" id="dot30"></div><div class="circle dark" id="dot31"></div>
+          <div class="circle dark" id="dot32"></div><div class="circle dark" id="dot33"></div>
+          <div class="circle dark" id="dot34"></div><div class="circle dark" id="dot35"></div>
+      </div><br/>
+      
+      <span class="clock hide">00:00:00</span><br/>
+      <span class="hide" id="bcd"></span>
+
+      <script type="application/dart" src="binary.dart"></script>
+      <script type="text/javascript" src="binary.dart.js"></script>
+  </body>
+</html>
