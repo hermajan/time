@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Binary clock with parameters.">
+    <meta name="description" content="Binary-coded decimal clock with parameters.">
     <!-- Parameter bcd=yes shows digits in BCD code, parameter clock=yes shows decimal digits. -->
-    <title>Binary clock</title>
+    <title>Binary-coded decimal clock</title>
     <style>
         body {
             background-color: black;
@@ -78,7 +78,7 @@
       <span class="clock hide">00:00:00</span><br/>
       <span class="hide" id="bcd"></span>
 
-      <script type="application/dart" src="binary.dart"></script>
-      <script type="text/javascript" src="binary.dart.js"></script>
+      <script async type="application/dart" src="bcd.dart"></script>
+      <script async src="dart.js"></script>
   </body>
 </html>
