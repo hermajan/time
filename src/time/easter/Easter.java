@@ -1,4 +1,4 @@
-package time;
+package time.easter;
 
 /**
  * Algorithms for the calculation of the date of Easter in a calendar.

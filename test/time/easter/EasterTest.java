@@ -1,4 +1,4 @@
-package time;
+package time.easter;
 
 import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
