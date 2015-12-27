@@ -5,7 +5,6 @@ import org.junit.Test;
 
 /**
  * Tests for the CzechNameDaysTest class.
- * @author DJohnny
  */
 public class CzechNameDaysTest {
     /**
@@ -17,5 +16,4 @@ public class CzechNameDaysTest {
         assertEquals("Jan", CzechNameDays.nameDay(24, 6));
         assertEquals("Horymír", CzechNameDays.nameDay(29, 2));
     }
-
 }

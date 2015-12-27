@@ -1,58 +1,3 @@
-/**
- * Returns name day for a inputted date.
- * @param date JavaScript date.
- * @return Name day or empty string.
- */
-function getName(date) {
-	var month=date.getMonth();
-	var day=date.getDate()-1;
-
-	if((month<names.length) && (day<names[month].length)) {
-		return names[month][day];
-	}
-	else {
-		return null;
-	}
-}
-
-/**
- * Returns name day for today.
- * @return Name day.
- */
-function todayName() {
-	var today=new Date();
-	var name=getName(today);
-
-	if(name!=null) {
-		return name;
-	}
-	else {
-		return null;
-	}
-}
-
-/**
- * Returns name day for a inputted date.
- * @param day Number of a day.
- * @param month Number of a month.
- * @return Name day.
- */
-function nameDay(day, month) {
-	if((day==null||day==0) && (month==null||month==0)) {
-		var date=new Date();
-		day=date.getDate();
-		month=date.getMonth()+1;
-	}
-
-	if((month<=names.length) && (day<=names[month-1].length)) {
-		return names[month-1][day-1];
-	}
-	else {
-		return null;
-	}
-}
-
-
 var leden=new Array("Nový rok -> Den obnovy samostatného českého státu", "Karina", "Radmila", "Diana", "Dalimil", "Tři králové", "Vilma", "Čestmír",
 	"Vladan", "Břetislav", "Bohdana", "Pravoslav", "Edita", "Radovan", "Alice", "Ctirad",
 	"Drahoslav", "Vladislav", "Doubravka", "Ilona", "Běla", "Slavomír", "Zdeněk", "Milena",
@@ -104,4 +49,3 @@ var prosinec=new Array("Iva", "Blanka", "Svatoslav", "Barbora", "Jitka", "Mikul�
 
 // A two-dimensional array of holidays, which provides holidays for the entire year.
 var names=new Array(leden, unor, brezen, duben, kveten, cerven, cervenec, srpen, zari, rijen, listopad, prosinec);
-

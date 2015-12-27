@@ -4,12 +4,33 @@
 	<meta charset="UTF-8">
     <title>Name day</title>
     <script src="czech.js" type="text/javascript"></script>
+	<script src="namedays.js" type="text/javascript"></script>
   </head>
-  <body>
-      <script type="text/javascript"> 
-		  document.write(nameDay(24,12)+"<br>");
-		  document.write(nameDay(0,0)+"<br>");
-  		  document.write(todayName()+"<br>");
-	  </script>
+  <body onload="webkitEvent(); otherEvent();">
+	<p>Today is Czech name day of <script type="text/javascript">document.write(todayName());</script>.</p>
+	
+	<p title="Webkit implementation.">On the <input type="date" id="dateInput" oninput="webkitEvent();">
+	is Czech name day of <span id="webkitOutput">someone</span>.</p>
+	
+	<p title="Other implementation.">On the <input type="number" id="dayInput" oninput="otherEvent();" min="1" max="31">
+	<input type="number" id="monthInput" oninput="otherEvent();" min="1" max="12">
+	is Czech name day of <span id="otherOutput">someone</span>.</p>
+	
+	<script type='text/javascript'>
+		document.getElementById('dateInput').valueAsDate = new Date();
+		function webkitEvent() {
+			var date = document.getElementById("dateInput").valueAsDate;
+			document.getElementById("webkitOutput").innerHTML=nameDay(date.getDate(),date.getMonth()+1);
+		}
+		
+		document.getElementById('dayInput').value = new Date().getDate();
+		document.getElementById('monthInput').value = new Date().getMonth()+1;
+		function otherEvent() {
+			var day = parseInt(document.getElementById("dayInput").value);
+			var month = parseInt(document.getElementById("monthInput").value);
+			
+			document.getElementById("otherOutput").innerHTML=nameDay(day,month);
+		}
+	</script>
   </body>
 </html>
