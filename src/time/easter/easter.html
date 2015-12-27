@@ -5,14 +5,14 @@
 		<title>Easter</title>
 		<script src="easter.js" type="text/javascript"></script>
 	</head>
-	<body>
-		Easter Sunday of the year 
-		<input type="text" id="easterInput" maxlength="4" size="4"> 
-		is on <span id="easterOutput">some day</span>.
+	<body onload="easterEvent();">
+		<p>Easter Sunday of the year 
+			<input type="number" id="easterInput" oninput="easterEvent();"> 
+			is on <span id="easterOutput">some day</span>.
+		</p>
 
 		<script type="text/javascript">
-			document.getElementById("easterInput").addEventListener("input", easterEvent);
-
+			document.getElementById("easterInput").value = new Date().getFullYear();
 			function easterEvent() {
 				var date = easterSundayOudin(parseInt(document.getElementById("easterInput").value));
 				document.getElementById("easterOutput").innerHTML = date[0] + ". " + date[1] + ". " + date[2];
