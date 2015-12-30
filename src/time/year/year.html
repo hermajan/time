@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Year</title>
+		<script src="leapYear.js" type="text/javascript"></script>
+	</head>
+	<body onload="leapYearEvent();">
+		 <p>Is the year 
+			<input type="number" id="leapYearInput" oninput="leapYearEvent();"> 
+			leap? <span id="leapYearOutput">Maybe</span>.
+		</p>
+
+		<script type="text/javascript">
+			document.getElementById("leapYearInput").value = new Date().getFullYear();
+			function leapYearEvent() {
+				var leap = leapYear(parseInt(document.getElementById("leapYearInput").value));
+				var output = "No";
+				if(leap===true) {
+					output = "Yes";
+				}
+				document.getElementById("leapYearOutput").innerHTML = output;
+			}
+		</script>
+	</body>
+</html>
