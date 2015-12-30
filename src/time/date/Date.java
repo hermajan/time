@@ -1,10 +1,9 @@
-package time;
+package time.date;
 
-import static time.Year.leapYear;
+import static time.year.Year.leapYear;
 
 /**
  * Handling with a date.
- * @author DJohnny
  */
 public class Date {
     /**

@@ -1,11 +1,10 @@
-package time;
+package time.date;
 
 import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
 
 /**
  * Tests for the DateTest class.
- * @author DJohnny
  */
 public class DateTest {
     /**
