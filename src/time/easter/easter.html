@@ -10,12 +10,20 @@
 			<input type="number" id="easterInput" oninput="easterEvent();"> 
 			is on <span id="easterOutput">some day</span>.
 		</p>
-
+		<p>Easter Friday is on <span id="easterFriday">some day</span>.</p>
+		<p>Easter Monday is on <span id="easterMonday">some day</span>.</p>
+		
 		<script type="text/javascript">
 			document.getElementById("easterInput").value = new Date().getFullYear();
 			function easterEvent() {
 				var date = easterSundayOudin(parseInt(document.getElementById("easterInput").value));
-				document.getElementById("easterOutput").innerHTML = date[0] + ". " + date[1] + ". " + date[2];
+				document.getElementById("easterOutput").innerHTML = date[0] + "." + date[1] + "." + date[2];
+				
+				date = easterFriday(parseInt(document.getElementById("easterInput").value));
+				document.getElementById("easterFriday").innerHTML = date[0] + "." + date[1] + "." + date[2];
+				
+				date = easterMonday(parseInt(document.getElementById("easterInput").value));
+				document.getElementById("easterMonday").innerHTML = date[0] + "." + date[1] + "." + date[2];
 			}
 		</script>
 	</body>

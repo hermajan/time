@@ -17,3 +17,29 @@ function easterSundayOudin(year) {
 	return new Array(day, month, year);
 }
 
+function easterFriday(year) {
+	var sunday = easterSundayOudin(year);
+	var day = sunday[0] - 2;
+	
+	var friday=[day, sunday[1], year];
+	if(day===0) {
+		friday = [31, sunday[1] - 1, year];
+	}
+	if(day===-1) {
+		friday = [30, sunday[1] - 1, year];
+	}
+	
+	return friday;
+}
+
+function easterMonday(year) {
+	var sunday = easterSundayOudin(year);
+	var day = sunday[0] + 1;
+	
+	var monday=[day, sunday[1], year];
+	if(day===32) {
+		monday = [1, sunday[1] + 1, year];
+	}
+	
+	return monday;
+}
