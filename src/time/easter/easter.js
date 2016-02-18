@@ -14,19 +14,19 @@ function easterSundayOudin(year) {
 	var month = 3 + Math.floor((L + 40) / 44);
 	var day = L + 28 - 31 * Math.floor(month / 4);
 
-	return new Array(day, month, year);
+	return new Date(year +"-"+ month +"-"+ day);
 }
 
 function easterFriday(year) {
 	var sunday = easterSundayOudin(year);
-	var day = sunday[0] - 2;
+	var day = sunday.getDate() - 2;
 	
-	var friday=[day, sunday[1], year];
+	var friday = new Date(year +"-"+ (sunday.getMonth()+1) +"-"+ day);
 	if(day===0) {
-		friday = [31, sunday[1] - 1, year];
+		friday = new Date(year +"-"+ sunday.getMonth() +"-"+ 31);
 	}
 	if(day===-1) {
-		friday = [30, sunday[1] - 1, year];
+		friday = new Date(year +"-"+ sunday.getMonth() +"-"+ 30);
 	}
 	
 	return friday;
@@ -34,11 +34,11 @@ function easterFriday(year) {
 
 function easterMonday(year) {
 	var sunday = easterSundayOudin(year);
-	var day = sunday[0] + 1;
+	var day = sunday.getDate() + 1;
 	
-	var monday=[day, sunday[1], year];
+	var monday = new Date(year +"-"+ (sunday.getMonth()+1) +"-"+ day);
 	if(day===32) {
-		monday = [1, sunday[1] + 1, year];
+		monday = new Date(year +"-"+ (sunday.getMonth()+2) +"-"+ 1);
 	}
 	
 	return monday;

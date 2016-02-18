@@ -17,13 +17,13 @@
 			document.getElementById("easterInput").value = new Date().getFullYear();
 			function easterEvent() {
 				var date = easterSundayOudin(parseInt(document.getElementById("easterInput").value));
-				document.getElementById("easterOutput").innerHTML = date[0] + "." + date[1] + "." + date[2];
+				document.getElementById("easterOutput").innerHTML = date.getDate() +"."+ (date.getMonth()+1) +"."+ date.getFullYear();
 				
 				date = easterFriday(parseInt(document.getElementById("easterInput").value));
-				document.getElementById("easterFriday").innerHTML = date[0] + "." + date[1] + "." + date[2];
+				document.getElementById("easterFriday").innerHTML = date.getDate() +"."+ (date.getMonth()+1) +"."+ date.getFullYear();
 				
 				date = easterMonday(parseInt(document.getElementById("easterInput").value));
-				document.getElementById("easterMonday").innerHTML = date[0] + "." + date[1] + "." + date[2];
+				document.getElementById("easterMonday").innerHTML = date.getDate() +"."+ (date.getMonth()+1) +"."+ date.getFullYear();
 			}
 		</script>
 	</body>
