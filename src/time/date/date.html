@@ -3,13 +3,21 @@
   <head>
 	<meta charset="UTF-8">
     <title>Date</title>
-    <script src="date.js" type="text/javascript"></script>
-	<script src="czech.js" type="text/javascript"></script>
-	<script src="english.js" type="text/javascript"></script>
+    <script src="week.js" type="text/javascript"></script>
+	<script src="date.js" type="text/javascript"></script>
   </head>
-  <body>
-	  <script type='text/javascript'>writeDate();</script><br>
-      <script type='text/javascript'>denVtydnu();</script><br>
-	  <script type='text/javascript'>dayOfWeek();</script>
+  <body onload="weekEvent();">
+	  <script type="text/javascript">writeDate();</script><br>
+	  
+	  <p>On the <input type="date" id="dateInput" oninput="weekEvent();">
+	is the <span id="weekOutput">someday</span>.</p>
+	  
+	  <script type="text/javascript">
+		document.getElementById("dateInput").valueAsDate = new Date();
+		function weekEvent() {
+			var date = document.getElementById("dateInput").valueAsDate;
+			document.getElementById("weekOutput").innerHTML=dayOfWeek(en,date);
+		}
+	  </script>
   </body>
 </html>
