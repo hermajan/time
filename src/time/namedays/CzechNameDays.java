@@ -48,7 +48,7 @@ public class CzechNameDays {
     "Marián","Emanuel","Dita","Soňa","Taťána","Arnošt","Kvido"};
   static String[] duben=new String[]{"Hugo","Erika","Richard","Ivana","Miroslava","Vendula","Heřman, Hermína","Ema",
     "Dušan","Darja","Izabela","Julius","Aleš","Vincenc","Anastázie","Irena",
-    "Rudolf","Velérie","Rostislav","Marcela","Alexandra","Evženie","Vojtěch","Jiří",
+    "Rudolf","Valérie","Rostislav","Marcela","Alexandra","Evženie","Vojtěch","Jiří",
     "Marek","Oto","Jaroslav","Vlastislav","Robert","Blahoslav"};
   static String[] kveten=new String[]{"Svátek práce","Zikmund","Alexej","Květoslav","Klaudie","Radoslav","Stanislav","Den vítězství",
     "Ctibor","Blažena","Svatava","Pankrác","Servác","Bonifác","Žofie","Přemysl",

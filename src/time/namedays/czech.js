@@ -12,7 +12,7 @@ var brezen=new Array("Bedřich", "Anežka", "Kamil", "Stela", "Kazimír", "Miros
 	"Marián", "Emanuel", "Dita", "Soňa", "Taťána", "Arnošt", "Kvido");
 var duben=new Array("Hugo", "Erika", "Richard", "Ivana", "Miroslava", "Vendula", "Heřman, Hermína", "Ema",
 	"Dušan", "Darja", "Izabela", "Julius", "Aleš", "Vincenc", "Anastázie", "Irena",
-	"Rudolf", "Velérie", "Rostislav", "Marcela", "Alexandra", "Evženie", "Vojtěch", "Jiří",
+	"Rudolf", "Valérie", "Rostislav", "Marcela", "Alexandra", "Evženie", "Vojtěch", "Jiří",
 	"Marek", "Oto", "Jaroslav", "Vlastislav", "Robert", "Blahoslav");
 var kveten=new Array("Svátek práce", "Zikmund", "Alexej", "Květoslav", "Klaudie", "Radoslav", "Stanislav", "Den vítězství",
 	"Ctibor", "Blažena", "Svatava", "Pankrác", "Servác", "Bonifác", "Žofie", "Přemysl",
